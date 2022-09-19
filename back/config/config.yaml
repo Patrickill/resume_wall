@@ -1,0 +1,17 @@
+dev: true
+
+server:
+  port: "8888"
+  allow_origins:
+    - "http://localhost:3000"
+
+db:
+  user_name: "lanstard"
+  password: "formylove"
+  address: "180.76.167.8:3306"
+  db_name: "love"
+
+jwt:
+  secret: "secretKey"
+  issuer: "issuer"
+  expires: 48
