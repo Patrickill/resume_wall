@@ -9,7 +9,7 @@ import (
 	"log"
 )
 
-var DB *gorm.DB
+var DB *gorm.DB //数据库类型，所有的数据都在这里，可以通过他读取数据库！
 
 func InitDB() {
 	dsn := fmt.Sprintf("%v:%v@tcp(%v)/%v?charset=utf8mb4&parseTime=True&loc=Local",

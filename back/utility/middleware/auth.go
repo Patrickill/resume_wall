@@ -8,7 +8,7 @@ import (
 	"strconv"
 )
 
-func Authorization(c *gin.Context) {
+func Authorization(c *gin.Context) { //验证登陆的token
 	token := c.GetHeader("Authorization")
 	if token == "" {
 		utility.Response(http.StatusUnauthorized, "No Token", nil, c)

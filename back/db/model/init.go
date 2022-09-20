@@ -6,8 +6,8 @@ import (
 )
 
 func InitModel() {
-	ok := db.DB.AutoMigrate(&User{}, &Class{})
+	ok := db.DB.AutoMigrate(&User{}, &Class{}) //自动补全键数值！
 	if ok != nil {
-		log.Panicln("Database Error: ", ok)
+		log.Panicln("s数据库错误: ", ok)
 	}
 }

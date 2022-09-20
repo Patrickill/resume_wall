@@ -15,6 +15,7 @@ type LoginData struct {
 	Password string `json:"password"`
 }
 
+// *gin.Contect是gin框架自带的存储http请求的东西
 func Login(c *gin.Context) {
 	var data LoginData
 	err := c.ShouldBindJSON(&data)
@@ -23,7 +24,7 @@ func Login(c *gin.Context) {
 		return
 	}
 	var user *model.User
-	user, err = model.GetUserByEmail(data.Email)
+	user, err = model.GetUserByEmail(data.Email) //利用邮箱登录获取对应USER
 	if user == nil {
 		utility.Response(http.StatusNotFound, "User not found", nil, c)
 		return

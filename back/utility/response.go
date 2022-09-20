@@ -5,6 +5,10 @@ import (
 	"net/http"
 )
 
+// Response http响应
+/*gin.H本质上是一种通用的Map<String>接口，即map[string]interface
+然后gin将map渲染为Json返回给服务端
+*/
 func Response(code int, msg string, data gin.H, c *gin.Context) {
 	if data != nil {
 		c.JSON(code, gin.H{
@@ -12,7 +16,7 @@ func Response(code int, msg string, data gin.H, c *gin.Context) {
 			"data": data,
 		})
 	} else {
-		c.JSON(code, gin.H{
+		c.JSON(code, gin.H{ //返回JSOM
 			"msg": msg,
 		})
 	}
