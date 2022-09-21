@@ -2,6 +2,7 @@ package middleware
 
 import (
 	"back/utility"
+	"fmt"
 	"github.com/gin-gonic/gin"
 	"log"
 	"net/http"
@@ -21,12 +22,13 @@ func Authorization(c *gin.Context) { //验证登陆的token
 		c.Abort()
 		return
 	}
-	id_int, ok := strconv.Atoi(id)
+	fmt.Println(id)
+	idInt, ok := strconv.Atoi(id)
 	if ok != nil {
 		utility.Response(http.StatusInternalServerError, "Internal server error", nil, c)
 		log.Println(ok)
 		c.Abort()
 	}
-	c.Set("user_id", uint64(id_int))
+	c.Set("user_id", uint64(idInt))
 	c.Next()
 }

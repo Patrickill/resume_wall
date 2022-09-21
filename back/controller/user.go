@@ -1,6 +1,7 @@
 package controller
 
 import (
+	"back/db"
 	"back/db/model"
 	"back/utility"
 	"fmt"
@@ -15,7 +16,6 @@ type LoginData struct {
 	Password string `json:"password"`
 }
 
-// *gin.Contect是gin框架自带的存储http请求的东西
 func Login(c *gin.Context) {
 	var data LoginData
 	err := c.ShouldBindJSON(&data)
@@ -54,6 +54,18 @@ func Register(c *gin.Context) {
 		utility.ResponseInternalServerError(c)
 		return
 	}
+	var data2 model.User
+	var data3 model.User
+	err = db.DB.Where("name = ?", data.Name).Find(&data2).Error
+	err = db.DB.Where("email = ?", data.Email).Find(&data3).Error
+	if data2.UserID != 0 {
+		utility.Response(http.StatusBadRequest, "用户名已经被注册", nil, c)
+		return
+	}
+	if data3.UserID != 0 {
+		utility.Response(http.StatusBadRequest, "邮箱已经被注册", nil, c)
+		return
+	}
 	err = model.AddUser(&data)
 	if err != nil {
 		log.Println(err)
@@ -63,6 +75,41 @@ func Register(c *gin.Context) {
 	utility.Response(http.StatusOK, "OK", nil, c)
 }
 
+// NameIsRegister 名字是否被占用
+func NameIsRegister(c *gin.Context) {
+	var data model.User
+	var data2 model.User
+	err := c.ShouldBindJSON(&data)
+	if err != nil {
+		log.Println(err)
+		utility.ResponseBadRequest(c)
+		return
+	}
+	err = db.DB.Where("name = ?", data.Name).Find(&data2).Error
+	if data2.UserID != 0 {
+		utility.Response(http.StatusBadRequest, "用户名已经被注册", nil, c)
+		return
+	}
+	utility.Response(http.StatusOK, "名称可以使用", nil, c)
+	return
+}
+func EmailIsRegister(c *gin.Context) {
+	var data model.User
+	var data2 model.User
+	err := c.ShouldBindJSON(&data)
+	if err != nil {
+		log.Println(err)
+		utility.ResponseBadRequest(c)
+		return
+	}
+	err = db.DB.Where("email = ?", data.Email).Find(&data2).Error
+	if data2.UserID != 0 {
+		utility.Response(http.StatusBadRequest, "邮箱已经被注册", nil, c)
+		return
+	}
+	utility.Response(http.StatusOK, "邮箱可以使用", nil, c)
+	return
+}
 func UpdateUser(c *gin.Context) {
 	var data model.User
 	err := c.ShouldBindJSON(&data)

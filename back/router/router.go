@@ -32,10 +32,9 @@ OPTIONS： 请求查询服务器的性能，或者查询与资源相关的选项
 func SetRouter() {
 	//命名规范 URL的path部分使用 系统/模块/操作 的格式，如 api/user/register
 	Router.POST("/api/user/register", controller.Register)
+	Router.GET("/api/user/is_register_name", controller.NameIsRegister)
+	Router.GET("/api/user/is_register_email", controller.EmailIsRegister)
 	Router.POST("/api/user/login", controller.Login)
-	Router.GET("/api/user", middleware.Authorization, controller.GetUserInfo)
-	Router.POST("/api/class", middleware.Authorization, controller.AddClass)
-	Router.DELETE("/api/class", middleware.Authorization, controller.DeleteClass)
-	Router.PUT("/api/class", middleware.Authorization, controller.UpdateClass)
-	Router.GET("/api/class", middleware.Authorization, controller.GetClasses)
+	Router.POST("/api/message/add", middleware.Authorization, controller.ClaimLoveMessage)
+	Router.GET("/api/message/getR", middleware.Authorization, controller.GetRandomMessage)
 }

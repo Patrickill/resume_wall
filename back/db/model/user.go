@@ -4,16 +4,13 @@ import "back/db"
 
 type User struct { //后面的‘gorm’代表一些特殊属性
 	//json:''为字段指定一个标记信息,这些标记信息通过反射接口可见，并参与结构体的类型标识，但在其他情况下被忽略。
-	UserID      uint64  `gorm:"primaryKey" json:"user_id"`                //指定一个列作为主键
-	Name        string  `gorm:"not null" json:"name" validate:"required"` //validate表示必须要有
-	Email       string  `gorm:"not null" json:"email" validate:"required"`
-	Phone       string  `json:"phone"`
-	Password    string  `gorm:"not null" json:"password" validate:"required"`
-	School      string  `json:"school"`
-	StuID       string  `json:"stu_id"`
-	ClassAmount uint64  `gorm:"not null; default:12" json:"class_amount"` //default默认值
-	WeekAmount  uint64  `gorm:"not null; default:16" json:"week_amount"`
-	Classes     []Class `json:"classes"`
+	UserID   uint64 `gorm:"primaryKey" json:"user_id"`                //指定一个列作为主键
+	Name     string `gorm:"not null" json:"name" validate:"required"` //validate表示必须要有
+	Email    string `gorm:"not null" json:"email" validate:"required"`
+	Phone    string `json:"phone"`
+	Password string `gorm:"not null" json:"password" validate:"required"`
+	School   string `json:"school"`
+	StuID    string `json:"stu_id"`
 }
 
 type APIUser struct {
