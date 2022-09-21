@@ -43,10 +43,10 @@
 .content li {
   list-style: none;
   float: left;
-  width: 400px;
+  width: 130px;
 }
 .content li a {
-  font-size: 40px;
+  font-size: 25px;
   line-height: 100px;
 }
 .main {
