@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>profess</title>
+</head>
+<li><a href="index.html" class="active">首页</a></li> <!--展示以往表白--> 
+<div class="container"> <!--对齐-->
+    <h3>表白墙</h3>
+    <p>输入后点击提交,会将信息显示在表格中</p>  
+    <div class="row">
+        <span>from：</span>
+        <input type="text" class="edit" id="from">
+    </div>
+    <div class="row">
+        <span>To：</span>
+        <input type="text" class="edit" id="to">
+    </div>
+    <div class="row">
+        <span>utter：</span>
+        <input type="text" class="edit" id="utter">
+    </div>
+    <div class="row">
+        <input type="button" value="提交" class="submit">
+    </div>
+    
+</div> 
+<script>
+    let submitButton = document.querySelector('.submit');
+    submitButton.onclick = function(){
+        let from = document.querySelector('#from');
+        let to = document.querySelector('#to');
+        let utter = document.querySelector('#utter');
+        if(from =='' || to == '' || utter == ''){
+            return;
+        }
+
+        let div = document.createElement('div') //新建一个对象
+        div.innerHTML = from.value + '对' + to.value + '说' + utter.value;
+        div.style.textAlign = 'center'; //局中
+        let container = document.querySelector('.container'); //输出
+       
+        container.appendChild(div); // 将div对象加到dom树上
+
+        from.value = ''; //清空
+        to.value = '';
+        utter.value = '';
+    }
+</script>
+</body>
+</html>
