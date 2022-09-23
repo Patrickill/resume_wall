@@ -14,13 +14,11 @@ type User struct { //后面的‘gorm’代表一些特殊属性
 }
 
 type APIUser struct {
-	Name        string `gorm:"primaryKey" json:"name"`
-	Email       string `gorm:"primaryKey" json:"email"`
-	Phone       string `json:"phone"`
-	School      string `json:"school"`
-	StuID       string `json:"stu_id"`
-	ClassAmount uint64 `gorm:"not null; default:12" json:"class_amount"`
-	WeekAmount  uint64 `gorm:"not null; default:16" json:"week_amount"`
+	Name   string `gorm:"primaryKey" json:"name"`
+	Email  string `gorm:"primaryKey" json:"email"`
+	Phone  string `json:"phone"`
+	School string `json:"school"`
+	StuID  string `json:"stu_id"`
 }
 
 // AddUser Omit仿佛是忽略指定键值
@@ -38,8 +36,8 @@ func GetUserByEmail(email string) (*User, error) {
 	}
 }
 
-func GetUserByID(id uint64) (*APIUser, error) {
-	var user APIUser
+func GetUserByID(id uint64) (*User, error) {
+	var user User
 	err := db.DB.Model(&User{}).Where("user_id = ?", id).First(&user).Error
 	if err != nil {
 		return nil, err

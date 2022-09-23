@@ -57,10 +57,11 @@ func GetRandomMessage(c *gin.Context) {
 func ClaimLoveMessage(c *gin.Context) {
 	var data model.LoveMessage
 	userID, _ := c.Get("user_id")
+	//fmt.Println(userID)
 	user, err := model.GetUserByID(userID.(uint64))
 	if err != nil {
 		log.Println(err)
-		utility.ResponseInternalServerError(c)
+		utility.Response(http.StatusInternalServerError, "查找不到用户", nil, c)
 		return
 	}
 	data.Email = user.Email
@@ -80,10 +81,11 @@ func ClaimLoveMessage(c *gin.Context) {
 		t1, t2, t3, t4, t5,
 	)
 	data.Time = time
+	data.UserID = user.UserID
 	err = model.AddMessage(&data) //添加消息
 	if err != nil {
 		log.Println(err)
-		utility.ResponseInternalServerError(c)
+		utility.Response(http.StatusInternalServerError, "添加消息失败", nil, c)
 		return
 	}
 	utility.ResponseOK(c, nil)
