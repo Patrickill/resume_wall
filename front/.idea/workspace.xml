@@ -2,34 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ecbe6eb0-9d3a-4146-bf7d-5c53ed86b995" name="变更" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/myVue/.babelrc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/myVue/.editorconfig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/myVue/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/myVue/.postcssrc.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/myVue/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/myVue/build/build.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/myVue/build/check-versions.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/myVue/build/logo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/myVue/build/utils.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/myVue/build/vue-loader.conf.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/myVue/build/webpack.base.conf.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/myVue/build/webpack.dev.conf.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/myVue/build/webpack.prod.conf.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/myVue/config/dev.env.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/myVue/config/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/myVue/config/prod.env.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/myVue/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/myVue/package-lock.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/myVue/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/myVue/src/App.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/myVue/src/assets/logo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/myVue/src/components/HelloWorld.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/myVue/src/components/duanzi.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/myVue/src/main.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/myVue/src/router/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/myVue/static/.gitkeep" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/myVue/yarn.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/front.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lovewall/login-register/JavaScript/register.js" beforeDir="false" afterPath="$PROJECT_DIR$/lovewall/login-register/JavaScript/register.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lovewall/login-register/templates/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/lovewall/login-register/templates/register.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,14 +41,18 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "ASKED_ADD_EXTERNAL_FILES": "true",
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
+    "javascript.nodejs.core.library.configured.version": "16.17.0",
+    "javascript.nodejs.core.library.typings.version": "16.11.62",
     "last_opened_file_path": "D:/LoveWall/front/myVue/build/webpack.base.conf.js",
     "nodejs_interpreter_path": "node",
     "nodejs_package_manager_path": "npm",
     "settings.editor.selected.configurable": "settings.webpack",
-    "ts.external.directory.path": "D:\\LoveWall\\front\\lovewall\\node_modules\\typescript\\lib",
+    "ts.external.directory.path": "C:\\Program Files\\JetBrains\\WebStorm 2022.2.2\\plugins\\JavaScriptLanguage\\jsLanguageServicesImpl\\external",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -94,6 +79,7 @@
       <workItem from="1663592257416" duration="1189000" />
       <workItem from="1663769678993" duration="928000" />
       <workItem from="1663954453208" duration="2893000" />
+      <workItem from="1664362738810" duration="1389000" />
     </task>
     <servers />
   </component>
