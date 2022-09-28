@@ -7,10 +7,13 @@
     <link rel="stylesheet" href="../assets/css/base.css" />
     <link rel="stylesheet" href="../assets/css/login.css" />
   </head>
+
   <body>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script type="text/javascript" src="../JavaScript/login.js"></script>
     <div id="wrapper">
       <div>
-        <img width="130px" height="130px" src="../assets/img/heart.png" />
+        <img width="130px" height="130px" src="../assets/img/heart.png" alt="heart" />
         <h2>对心爱的TA留下一句话</h2>
       </div>
       <nav class="switch_nav">
@@ -19,13 +22,13 @@
         <div class="switch_bottom" id="switch_bottom"></div>
       </nav>
       <div id="login">
-        <form method="post" action="">
+        <form>
           <ul class="group_input">
             <li>
               <input
                 type="text"
                 class="mobile required"
-                id="mobile"
+                id="email"
                 placeholder="请输入邮箱"
               />
             </li>
@@ -33,17 +36,17 @@
               <input
                 type="password"
                 class="psd required"
-                id="psd"
+                id="password"
                 placeholder="请输入密码"
               />
             </li>
           </ul>
-          <button type="submit" class="submit_btn" id="btnSubmit">登陆</button>
+          <button type="button" class="submit_btn" id="submitbutton" onclick="login()">登陆</button>
         </form>
       </div>
       <div class="QRcode_btn">
         <div type="submit" class="submit_btn download_btn">
-			<a href="../../html/index.html">返回首页</a>
+			<a href="../../index/html/index_new.html">返回首页</a>
 		</div>
         <div class="QRcode">
           <div class="box"></div>
@@ -52,31 +55,6 @@
       <div id="footer">
         <a href="javascript:;">小组成员：黄宇鑫 吴天卓 徐子涵 吴菲涵</span>
       </div>
-    </div>
-    <script src="../assets/libs/jquery-1.12.4/jquery.min.js"></script>
-    <!-- <script src="../assets/libs/particles/js/lib/stats.js"></script> -->
-    <script>
-      var count_particles, stats, update;
-      stats = new Stats();
-      stats.setMode(0);
-      stats.domElement.style.position = "absolute";
-      stats.domElement.style.left = "0px";
-      stats.domElement.style.top = "0px";
-      document.body.appendChild(stats.domElement);
-      count_particles = document.querySelector(".js-count-particles");
-      update = function () {
-        stats.begin();
-        stats.end();
-        if (
-          window.pJSDom[0].pJS.particles &&
-          window.pJSDom[0].pJS.particles.array
-        ) {
-          count_particles.innerText =
-            window.pJSDom[0].pJS.particles.array.length;
-        }
-        requestAnimationFrame(update);
-      };
-      requestAnimationFrame(update);
-    </script>
+     </div>
   </body>
 </html>
