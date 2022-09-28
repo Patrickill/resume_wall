@@ -5,11 +5,11 @@ function reg(){
       "password": document.getElementById('password').value
    })
        .then(function (response) {
-          alert("你好");
+          alert("你好,"+document.getElementById('name').value);
           console.log(JSON.stringify(response.data));
-          alert(JSON.stringify(response.data));
        })
        .catch(function (error) {
           console.log(error);
+          alert(error);
        });
 }

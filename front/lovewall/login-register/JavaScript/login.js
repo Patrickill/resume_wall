@@ -1,6 +1,4 @@
 function login(){
-   alert("你好");
-   var axios = require('axios');
     var data = JSON.stringify({
    "email": document.getElementById('email').value,
    "password": document.getElementById('password').value
@@ -15,9 +13,11 @@ var config = {
 axios(config)
 .then(function (response) {
    console.log(JSON.stringify(response.data));
-   alert(JSON.stringify(response.data));
+   alert('登陆成功');
+   location.href="../../index/html/index_new.html";
 })
 .catch(function (error) {
    console.log(error);
+   alert(error);
 });
 }
