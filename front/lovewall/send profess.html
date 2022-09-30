@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="profess-op.css">
+    <title>profess</title>
+</head>
+
+<body>
+
+<div class="bar">
+    <div class="heart">
+    </div>
+    <div class="center_list">
+          <ul>
+            <li><a href="../html/index_new.html">首页</a></li>
+            <li><a href="#">告白</a></li>
+            <li><a href="#">我的</a></li>
+            <li><a href="#">精弘网络</a></li>
+          </ul>
+    </div>
+    <div class="right_list">
+          <ul>
+             <li><a href="../../login-register/templates/register.html">注册</a></li>
+             <li><a href="../../login-register/templates/login.html">登陆</a></li>
+          </ul>
+    </div>
+</div>
+
+<h3>SEND MESSAGE TO THE ONE YOU LOVE</h3>
+ 
+<div class="main">
+    <div class="show">
+        <div class="row">
+         <input type="text" class="edit" id="utter" placeholder="请输入表白内容......">
+         <input type="text" class="edit" id="from" placeholder="请输入你的名字">
+         <input type="text" class="edit" id="to" placeholder="请输入被表白者的名字">
+       </div>
+   
+   
+      <div class="row">
+         <input type="button" value="发表" class="submit">
+       </div>
+    </div>
+</div>
+    
+<script>
+    let submitButton = document.querySelector('.submit');
+    submitButton.onclick = function(){
+        let from = document.querySelector('#from');
+        let to = document.querySelector('#to');
+        let utter = document.querySelector('#utter');
+        if(from =='' || to == '' || utter == ''){
+            return;
+        }
+
+        let div = document.createElement('div') //新建一个对象
+        div.innerHTML = from.value + '对' + to.value + '说' + utter.value;
+        div.style.textAlign = 'center'; //局中
+        let container = document.querySelector('.container'); //输出
+       
+        container.appendChild(div); // 将div对象加到dom树上
+
+        from.value = ''; //清空
+        to.value = '';
+        utter.value = '';
+    }
+</script>
+</body>
+</html>
