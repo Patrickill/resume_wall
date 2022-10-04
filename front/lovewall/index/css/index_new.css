@@ -135,12 +135,12 @@ body {
 }
 .show {
   height: 50%;
-  width: 85%;
+  width: 42.5%;
   background-color: aliceblue;
   position: absolute;
   left: 50%;
   top: 10%;
-  margin-left: -42.5%;
+  margin-left: -43%;
   margin-top: 0.5%;
   border: 1% solid whitesmoke;
   border-radius: 10%;
@@ -151,4 +151,16 @@ body {
 }
 #to_content {
   font-size: 1vw;
+}
+.com{
+  height: 50%;
+  width: 42.5%;
+  background-color: aliceblue;
+  position: absolute;
+  left: 36vw;
+  top: 10%;
+  margin-right: -15;
+  margin-top: 0.5%;
+  border: 1% solid whitesmoke;
+  border-radius: 10%;
 }
