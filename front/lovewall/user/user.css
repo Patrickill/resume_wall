@@ -1,0 +1,35 @@
+body {
+  height: 88vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+}
+
+bar {
+  height: 88vh;
+  width: 18vw;
+  background-color: blue;
+  flex-direction: column;
+}
+
+bar div {
+  height: 8vh;
+  width: 18vw;
+  text-align: center;
+}
+
+bar div a {
+  display: block;
+  height: 7vh;
+  margin-top: 3vh;
+  color: rgb(5, 6, 6);
+  border-bottom: solid;
+  border-width: 1px;
+  border-color: black;
+}
+
+main {
+  height: 88vh;
+  width: 82vw;
+  background-color: brown;
+}
