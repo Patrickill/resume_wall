@@ -1,3 +1,4 @@
+
 function showmessage()
 {
   var conflg={
@@ -9,11 +10,20 @@ function showmessage()
 }
   axios(conflg)
   .then(function(response){
+    console.log(response.data);
       document.getElementById('from').innerHTML=response.data.data.info.name;
       document.getElementById('to_content').innerHTML=response.data.data.info.message;
+      document.getElementById('show_time').innerHTML=response.data.data.info.time;
+      localStorage.setItem('message_id','example');
+      localStorage.removeItem('message_id');
+      localStorage.setItem('message_id',response.data.data.info.id);
   })
   .catch(function(error)
   {
     console.error();
   });
+}
+function clean()
+{
+  getElementById('comment').innerHTML="nihao";
 }

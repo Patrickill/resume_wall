@@ -113,15 +113,27 @@ body{
 }
 .show{
     height: 50%;
-    width: 85%;
+    width: 42%;
     background-color: aliceblue;
     position: absolute;
     left: 50%;
     top: 10%;
-    margin-left: -42.5%;
+    margin-left: -43%;
     margin-top: 0.5%;
     border: 1% solid whitesmoke;
     border-radius: 10%;
+}
+.com{
+  height: 50%;
+  width: 42%;
+  background-color: aliceblue;
+  position: absolute;
+  left: 50%;
+  top: 10%;
+  margin-left: 1%;
+  margin-top: 0.5%;
+  border: 1% solid whitesmoke;
+  border-radius: 10%;
 }
 #from_p{
   font-size: 3vw;
