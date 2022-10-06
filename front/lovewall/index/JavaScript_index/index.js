@@ -15,9 +15,10 @@ function showmessage()
       document.getElementById('from').innerHTML=response.data.data.info.name;
       document.getElementById('to_content').innerHTML=response.data.data.info.message;
       document.getElementById('show_time').innerHTML=response.data.data.info.time;
-        var message_comment=response.data.comment;
+        var message_comment=response.data.data.comment;
         for(let comment in message_comment)
         {
+          alert(JSON.stringify(comment));
           let comment_ul=document.getElementById('comment_area');
           let new_comment=document.createElement('li');
          new_comment.innerHTML=comment.message+"    "+comment.time;
@@ -31,7 +32,7 @@ function showmessage()
     console.error();
   });
 }
-function clean()
+function submit()
 {
   let comment_ul=document.getElementById('comment_area');
   let new_comment=document.createElement('li');
@@ -57,7 +58,6 @@ axios(config)
 .then(function(response)
 {
     console.log(JSON.stringify(response.data));
-    alert("发送成功！");
 })
 .catch(function(error)
 {
