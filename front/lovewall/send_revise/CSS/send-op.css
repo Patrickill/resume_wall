@@ -99,6 +99,8 @@ input:focus {
 }
 
 span {
+  margin-top: 5vh;
+  margin-left: 2.5vw;
   display: flex;
   font-family: "Arial Normal", "Arial", sans-serif;
   font-weight: bold;
@@ -109,8 +111,10 @@ span {
 }
 
 textarea {
+  margin-top: 1vh;
   line-height: 1.5;
-  width: 60vw;
+  width: 58vw;
+  height: 38vh;
   color: #000000;
   resize: none;
   font-size: 2vw;
@@ -123,7 +127,7 @@ textarea {
   padding-top: 1%;
   padding-left: 2%;
   padding-right: 2%;
-  text-align: center;
+  text-align: left;
   justify-content: center;
 }
 
@@ -136,20 +140,28 @@ textarea {
   color: rgb(109, 109, 109);
   width: 8vw;
   height: 8vh;
-  font-size: 4vh;
+  font-size: 3vh;
   font-weight: bolder;
   border-width: 0px;
   border-radius: 50px;
   background-color: rgb(255, 255, 255, 0.1);
-  box-shadow: inset 0px 3px 5px rgba(219, 172, 198, 1);
+  box-shadow: 0px 5px 5px rgba(219, 172, 198, 1);
+}
+
+.submit:active {
+  box-shadow: 0px 2px 5px rgba(219, 172, 198, 1);
 }
 
 .from {
   width: 30vw;
   height: 8vh;
-  font-size: 4vh;
+  font-size: 3vh;
 }
 
 .container p {
   text-shadow: 0px 6px 5px rgba(233, 150, 150, 0.7);
+}
+
+.row {
+  margin-top: 2vh;
 }
