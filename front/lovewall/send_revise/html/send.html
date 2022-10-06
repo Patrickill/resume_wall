@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="profess-op.css">
+    <link rel="stylesheet" href="../CSS/send-op.css">
     <title>发送界面</title>
 </head>
 
@@ -14,7 +14,7 @@
     <script type="text/javascript" src="../javascript/send.js"></script>
       <div class="bar">
         <div class="heart">
-          <img src="../image/heart.png" />
+          <img src="../../index/image/heart.png" />
         </div>
         <div class="center_list">
           <ul>
@@ -30,7 +30,7 @@
               <a href="../../login-register/templates/register.html">注册</a>
             </li>
             <li class="icon_box">
-              <img src="../image/user-circle.png" width="50px" height="50px" />
+              <img src="../../index/image/user-circle.png" width="50px" height="50px" />
             </li>
             <li class="register_buttom">
               <a href="../../login-register/templates/login.html">登陆</a>
@@ -38,23 +38,19 @@
           </ul>
         </div>
       </div>
-    <p><span>SEND MESSAGE TO THE ONE YOU LOVE</span></p>
-    <div class="container">
-        
-
-        <div class="in">
-          <div class="row">
-            <input class="edit utter" id="pusher_name" type="text" placeholder="请输入表白内容......" required maxlength="300">
+     <div class="container">
+        <p><span>SEND MESSAGE TO THE ONE YOU LOVE</span></p>
+          <div class="row"> 
+            <input class="utter" type="text" placeholder=" 请输入表白内容......" required maxlength="300">
           </div>
+        <div class="flex">
+          <div class="row"> 
+            <input class="from" type="text" placeholder="  请输入你的名字" required>
         </div>
         <div class="row">
-            <input class="edit from" id="message" type="text" placeholder="请输入你的名字" required>
+            <input type="button" value=" 发 表" class="submit">
         </div>
-        <div class="row">
-            <button class="submit" onclick="send()">提交</button>
-        </div>
-    
-
+       </div> 
     </div>
 </body>
 </body>
