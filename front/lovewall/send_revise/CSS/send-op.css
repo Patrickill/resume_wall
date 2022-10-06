@@ -92,7 +92,7 @@ input {
   transition: border-color 0.2s ease-in-out;
   background-color: rgb(255, 255, 255, 0.1);
   box-shadow: inset 0px 3px 5px rgba(219, 172, 198, 1);
-  font-weight: bolder;
+  font-weight: lighter;
 }
 input:focus {
   border-color: #de4437;
@@ -110,7 +110,7 @@ span{
 
 textarea{
   line-height: 1.5;
-  width:60vw;
+  width:40vw;
   color: #000000;
   resize:none;
   font-size: 2vw;
@@ -136,7 +136,7 @@ textarea{
   color:rgb(109, 109, 109) ;
   width: 8vw;
   height: 8vh;
-  font-size: 4vh;
+  font-size: 3vh;
   font-weight: bolder;
   border-width: 0px;
   border-radius: 50px;
@@ -147,7 +147,7 @@ textarea{
 .from{
   width: 30vw;
   height: 8vh;
-  font-size: 4vh;
+  font-size: 3vh;
 }
 
 .container p {
