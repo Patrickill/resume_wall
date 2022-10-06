@@ -1,57 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../CSS/send-op.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../CSS/send-op.css" />
     <title>发送界面</title>
-</head>
+  </head>
 
-<body>
-    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-    <script type="text/javascript" src="../javascript/send.js"></script>
-      <div class="bar">
-        <div class="heart">
-          <img src="../../index/image/heart.png" />
-        </div>
-        <div class="center_list">
-          <ul>
-            <li><a href="../../index/html/index_new.html">首页</a></li>
-            <li><a href="../../send_revise/html/send.html">告白</a></li>
-            <li><a href="../../user/user.html">我的</a></li>
-            <li><a href="http://www.jh.zjut.edu.cn/">精弘网络</a></li>
-          </ul>
-        </div>
-        <div class="right_list">
-          <ul>
-            <li>
-              <a href="../../login-register/templates/register.html">注册</a>
-            </li>
-            <li class="icon_box">
-              <img src="../../index/image/user-circle.png" width="50px" height="50px" />
-            </li>
-            <li class="register_buttom">
-              <a href="../../login-register/templates/login.html">登陆</a>
-            </li>
-          </ul>
-        </div>
+  <body>
+    <div class="bar">
+      <div class="heart">
+        <img src="../../index/image/heart.png" />
       </div>
-     <div class="container">
-        <p><span>SEND MESSAGE TO THE ONE YOU LOVE</span></p>
-          <div class="row"> 
-            <input id="message" class="utter" type="text" placeholder=" 请输入表白内容......" required maxlength="300">
-          </div>
-        <div class="flex">
-          <div class="row"> 
-            <input id="pusher_name" class="from" type="text" placeholder="  请输入你的名字" required>
+      <div class="center_list">
+        <ul>
+          <li><a href="../../index/html/index_new.html">首页</a></li>
+          <li>
+            <a class="now" href="../../send_revise/html/send.html">告白</a>
+          </li>
+          <li><a href="../../user/user.html">我的</a></li>
+          <li>
+            <a href="https://github.com/Patrickill/love_wall">项目地址</a>
+          </li>
+        </ul>
+      </div>
+      <div class="right_list">
+        <ul>
+          <li>
+            <a href="../../login-register/templates/register.html">注册</a>
+          </li>
+          <li class="icon_box">
+            <img
+              src="../../index/image/user-circle.png"
+              width="50px"
+              height="50px"
+            />
+          </li>
+          <li class="register_buttom">
+            <a href="../../login-register/templates/login.html">登陆</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="container">
+      <p><span>SEND MESSAGE TO THE ONE YOU LOVE</span></p>
+      <div class="row">
+        <textarea rows="10" cols="10" placeholder="请输入表白内容"></textarea>
+      </div>
+      <div class="flex">
+        <div class="row">
+          <input
+            id="pusher_name"
+            class="from"
+            type="text"
+            placeholder="  请输入你的名字"
+            required
+          />
         </div>
         <div class="row">
-            <input type="button" value=" 发 表" class="submit" onclick="send()">
+          <input type="button" value=" 发 表" class="submit" onclick="send()" />
         </div>
-       </div> 
+      </div>
     </div>
-</body>
-</body>
+  </body>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script type="text/javascript" src="../javascript/send.js"></script>
 </html>
