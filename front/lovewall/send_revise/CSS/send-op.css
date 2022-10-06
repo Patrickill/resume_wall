@@ -111,7 +111,9 @@ span {
 }
 .utter {
   line-height: 25vw;
-  width: 60vw;}
+  width: 60vw;
+}
+
 textarea {
   margin-top: 1vh;
   line-height: 1.5;
@@ -166,4 +168,13 @@ textarea {
 
 .row {
   margin-top: 2vh;
+}
+
+.now {
+  border-bottom: 5px solid red;
+  color: black;
+}
+
+.register_buttom {
+  font-weight: 777;
 }
