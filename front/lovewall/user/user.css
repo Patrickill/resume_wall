@@ -54,8 +54,8 @@ bar div a {
   margin-top: 3vh;
   color: rgb(85, 26, 139);
   border-bottom: solid;
-  border-width: 2px;
-  border-color: rgb(255, 100, 150, 0.8);
+  border-width: 1.5px;
+  border-color: rgb(255, 100, 150, 0.5);
   font-size: large;
   font-weight: 800;
 }

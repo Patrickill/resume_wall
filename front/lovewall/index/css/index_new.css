@@ -24,7 +24,7 @@ body {
     rgba(246, 175, 192)
   );
   position: relative;
-  box-shadow: 10px 10px 10px rgb(109, 109, 109);
+  box-shadow: 0px 8px 13px rgb(109, 109, 109, 0.5);
   z-index: 999;
   display: flex;
   justify-content: center;
@@ -77,20 +77,10 @@ body {
   position: relative;
   width: 100vw;
   height: 87.5vh;
-  background: -webkit-linear-gradient(
-    270deg,
-    rgba(219, 172, 198, 1) 0%,
-    rgba(237, 200, 200, 1) 100%
-  );
-  background: -moz-linear-gradient(
-    180deg,
-    rgba(219, 172, 198, 1) 0%,
-    rgba(237, 200, 200, 1) 100%
-  );
-  background: linear-gradient(
-    180deg,
-    rgba(219, 172, 198, 1) 0%,
-    rgba(237, 200, 200, 1) 100%
+  background-image: linear-gradient(
+    to right,
+    rgba(246, 175, 192),
+    rgba(240, 217, 233)
   );
 }
 .content {
@@ -171,4 +161,7 @@ body {
   margin-right: -15;
   margin-top: 0.5%;
   border-radius: 10%;
+}
+
+.send {
 }
