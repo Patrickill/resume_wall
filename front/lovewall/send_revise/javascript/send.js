@@ -4,6 +4,7 @@ function send()
         {
             "name": document.getElementById('pusher_name').value,
             "message": document.getElementById('message').value,
+            "message_id": sessionStorage.getItem('message_id'),
         }
     );
     var config={
@@ -11,14 +12,14 @@ function send()
         url: 'http://180.76.167.8:8888/api/message/add',
         data: data,
         headers: {
-            'Authorization': localStorage.getItem('token')
+            'Authorization': sessionStorage.getItem('token')
         }
     };
     axios(config)
     .then(function(response)
     {
         console.log(JSON.stringify(response.data));
-        alert("发送成功！");
+        alert("宁的信息发送成功！");
     })
     .catch(function(error)
     {
