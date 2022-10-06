@@ -9,9 +9,7 @@
         <title>表白墙首页</title>
     </head>
     <body>
-        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-        <script type="text/javascript" src="../JavaScript_index/index.js"></script>
+
 
         <div class="bar">
             <div class="heart">
@@ -19,10 +17,10 @@
             </div>
             <div class="center_list">
                   <ul>
-                    <li><a href="../html/index_new.html">首页</a></li>
+                    <li><a class="now" ref="../html/index_new.html">首页</a></li>
                     <li><a href="../../send_revise/html/send.html">告白</a></li>
                     <li><a href="../../user/user.html">我的</a></li>
-                    <li><a href="http://www.jh.zjut.edu.cn/index">精弘网络</a></li>
+                    <li><a href="https://github.com/Patrickill/love_wall">项目地址</a></li>
                   </ul>
             </div>
             <div class="right_list">
@@ -41,13 +39,20 @@
         </div>
 
         
-           <div class="main">
+        <div class="main">
             <div class="content">
               <div class="main-show">
               <div class="show">
+                     <span class="title">表白展示区</span>
+                     <p id="from" name="pusher">From:表白人</p>
+                     <p id="to_content" name="message">表白内容</p>
+                     <p id="show_time" name="show_time">时间</p>
                 </div>
                 <div class="com">
+                  <span class="title">评论区</span>
                     <ul id="comment_area">
+                        <li>测试评论1   用户名</li>
+                        <li>测试评论2   用户名</li>
                     </ul>
                   </div>  
                 </div>
@@ -57,19 +62,22 @@
                         <div class="comm">
                           <textarea id="comment" placeholder="在这里输入评论~" rows="2"></textarea>
                         </div>       
-                        <div class="send">
-                          <img src="../image/send.svg" />
-                        </div>  
+
                         <div class="pu">
                           <button id="push" type="button" onclick="send_comment()">提交</button> 
                           <button id="flushed" type="button" onclick="showmessage()">刷新</button>
                         </div>
                       </div>
-                     </form> 
+                     </form>
+                     
                 </div>
             </div>
         </div>
       </div>
     </div>
   </body>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script type="text/javascript" src="../JavaScript_index/index.js"></script>
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 </html>
