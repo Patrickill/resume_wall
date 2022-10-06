@@ -91,84 +91,109 @@ body {
     180deg,
     rgba(219, 172, 198, 1) 0%,
     rgba(237, 200, 200, 1) 100%)
+    display: flex;
+    align-items: center;
+    justify-content: center;  
 }
 .content {
-  position: absolute;
   width: 66vw;
-  height: 70vh;
-  left: 50%;
-  top: 50%;
-  margin-top: -35vh;
-  margin-left: -35vw;
-  background-color: rgba(255, 255, 255, 0.1);
-  border-radius: 38px;
-  box-shadow: 0px 8px 13px rgba(219, 172, 198, 1);
+    height: 70vh;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 38px;
+    box-shadow: 0px 8px 13px rgba(219, 172, 198, 1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.main-show{
+    width:100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.main-comment{
+  display: flex;
+  flex-direction: row;
+  width:66vw;
+}
+.comm{
+  width:100%;
+}
+.send{
+  align-items: center;
+  justify-content: center;
+  width:15%;
+
+}
+.pu{
+  align-items: center;
+  justify-content: center;
+  margin: 2%;
 }
 .comment {
-  position: absolute;
-  width: 100%;
-  height: 37.8%;
+  align-items: center;
+  justify-content: center;
   bottom: 0;
-  display: inline-block;
   opacity: 0.8;
 }
 .comment textarea {
-  margin: auto 7%;
-  border: 0;
-  border-radius: 20px;
-  width: 85%;
-  height: 15vh;
-  padding: 10px;
-  resize: none;
-  font-size: 2vw;
-  background-color: rgb(255, 255, 255, 0.1);
-  box-shadow: inset 0px 3px 5px rgba(219, 172, 198, 1);
+    margin: 3% 7%;
+    border: 0;
+    border-radius: 20px;
+    width: 85%;
+    padding: 10px;
+    resize: none;
+    font-size: 1vw;
+    background-color: rgb(255, 255, 255, 0.1);
+    box-shadow: inset 0px 3px 5px rgba(219, 172, 198, 1);
+    line-height: 1.5;
 }
 .comment button {
-  float: right;
-  width: 8vw;
-  height: 5vh;
-  font-size: 2vh;
-  font-weight: lighter;
-  border-width: 0px;
-  border-radius: 50px;
-  background-color: rgb(255, 255, 255, 0.1);
-  box-shadow: inset 0px 3px 5px rgba(219, 172, 198, 1);
-}
+    width: 8vw;
+    height: 5vh;
+    font-size: 2vh;
+    font-weight: lighter;
+    border-width: 0px;
+    border-radius: 50px;
+    background-color: rgb(255, 255, 255, 0.1);
+    box-shadow: inset 0px 3px 5px rgba(219, 172, 198, 1);
+    padding: auto auto 10% auto;
+    margin-bottom: 10px;
+  }
 #flushed {
-  float: left;
-  width: 5vw;
-  height: 5vh;
-}
-.show {
-  height: 50%;
-  width: 42.5%;
-  background-color: rgb(255, 255, 255, 0.1);
-  box-shadow: inset 0px 3px 5px rgba(219, 172, 198, 1);
-  position: absolute;
-  left: 50%;
-  top: 10%;
-  margin-left: -43%;
-  margin-top: 0.5%;
-  border-radius: 10%;
-}
-#from_p {
-  font-size: 3vw;
-  margin-left: 20px;
-}
-#to_content {
-  font-size: 1vw;
-}
-.com {
-  height: 50%;
-  width: 42.5%;
-  background-color: rgb(255, 255, 255, 0.1);
-  box-shadow: inset 0px 3px 5px rgba(219, 172, 198, 1);
-  position: absolute;
-  left: 36vw;
-  top: 10%;
-  margin-right: -15;
-  margin-top: 0.5%;
-  border-radius: 10%;
-}
+    width: 8vw;
+    height: 5vh;
+  }
+  .show {
+    height: 70%;
+    width: 42.5%;
+    background-color: rgb(255, 255, 255, 0.1);
+    box-shadow: inset 0px 3px 5px rgba(219, 172, 198, 1);
+    border-radius: 10%;
+    padding: 10px;
+    margin: auto 1% 3% 3%;
+  }
+  #from_p {
+    font-size: 3vw;
+    margin-left: 20px;
+  }
+  #to_content {
+    font-size: 1vw;
+  }
+  .com {
+    height: 70%;
+    width: 42.5%;
+    background-color: rgb(255, 255, 255, 0.1);
+    box-shadow: inset 0px 3px 5px rgba(219, 172, 198, 1);
+    border-radius: 10%;
+    padding: 10px; 
+    margin:auto 3% 3% 1%;
+  }
 
+.send img{
+  width: 5vw;
+}
