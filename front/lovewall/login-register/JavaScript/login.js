@@ -14,7 +14,6 @@ axios(config)
 .then(function (response) {
    console.log(JSON.stringify(response.data));
    sessionStorage.setItem('token',response.data.data.token);
-   sessionStorage.setItem('user',response.data.user);
    alert('登陆成功');
    location.href="../../index/html/index_new.html";
 })

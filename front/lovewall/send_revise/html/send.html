@@ -20,7 +20,7 @@
           <ul>
             <li><a href="../../index/html/index_new.html">首页</a></li>
             <li><a href="../../send_revise/html/send.html">告白</a></li>
-            <li><a href="#">我的</a></li>
+            <li><a href="../../user/user.html">我的</a></li>
             <li><a href="http://www.jh.zjut.edu.cn/">精弘网络</a></li>
           </ul>
         </div>
@@ -41,14 +41,14 @@
      <div class="container">
         <p><span>SEND MESSAGE TO THE ONE YOU LOVE</span></p>
           <div class="row"> 
-            <input class="utter" type="text" placeholder=" 请输入表白内容......" required maxlength="300">
+            <input id="message" class="utter" type="text" placeholder=" 请输入表白内容......" required maxlength="300">
           </div>
         <div class="flex">
           <div class="row"> 
-            <input class="from" type="text" placeholder="  请输入你的名字" required>
+            <input id="pusher_name" class="from" type="text" placeholder="  请输入你的名字" required>
         </div>
         <div class="row">
-            <input type="button" value=" 发 表" class="submit">
+            <input type="button" value=" 发 表" class="submit" onclick="send()">
         </div>
        </div> 
     </div>

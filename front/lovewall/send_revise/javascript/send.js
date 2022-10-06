@@ -4,7 +4,6 @@ function send()
         {
             "name": document.getElementById('pusher_name').value,
             "message": document.getElementById('message').value,
-            "message_id": sessionStorage.getItem('message_id'),
         }
     );
     var config={
@@ -26,4 +25,6 @@ function send()
         console.log(error);
         alert(error);
     })
+    document.getElementById('pusher_name').value="";
+    document.getElementById('message').value="";
 }
