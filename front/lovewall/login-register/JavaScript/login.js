@@ -13,8 +13,7 @@ var config = {
 axios(config)
 .then(function (response) {
    console.log(JSON.stringify(response.data));
-   sessionStorage.setItem('token',response.data.data.token);
-   sessionStorage.setItem('user',response.data.user);
+   localStorage.setItem('token',response.data.data.token);
    alert('登陆成功');
    location.href="../../index/html/index_new.html";
 })
