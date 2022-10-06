@@ -1,49 +1,90 @@
 <!DOCTYPE html>
-<html lang='ZH-CN'>
-    <head>
-       <meta charset="utf-8">
-       <title>user center</title>
-       <link rel="stylesheet" href="user.css" />
-    </head>
-   </body>
-          <bar>
-            <div>
-                <a href="">我的表白</a>
-            </div>
-            <div>
-                <a href="../index/html/index_new.html">回到首页</a>
-            </div>
-          </bar>
-          <main>
-            <div class="container">
-                <ul>
-                    <li>
-                        <textarea class="comment" placeholder="表白语句1(直接输入即可修改此表白）"></textarea>
-                        <button name="button">修改</button>
-                        <button name="button">删除</button>
-                    </li>
-                    <li>
-                        <textarea class="comment" placeholder="表白2"></textarea>
-                        <button name="button">修改</button>
-                        <button name="button">删除</button>
-                    </li>
-                    <li>
-                        <textarea class="comment" placeholder="表白3"></textarea>
-                        <button name="button">修改</button>
-                        <button name="button">删除</button>
-                    </li>
-                    <li>
-                        <textarea class="comment" placeholder="表白4"></textarea>
-                        <button name="button">修改</button>
-                        <button name="button">删除</button>
-                    </li>
-                    <li>
-                        <textarea class="comment" placeholder="表白5"></textarea>
-                        <button name="button">修改</button>
-                        <button name="button">删除</button>
-                    </li>
-                </ul>
-            </div>
-          </main>
-   <body>
+<html lang="ZH-CN">
+  <head>
+    <meta charset="utf-8" />
+    <title>user center</title>
+    <link rel="stylesheet" href="user.css" />
+  </head>
+  <body>
+    <div class="top_bar">
+      <div class="heart">
+        <img src="../index/image/heart.png" />
+      </div>
+      <div class="center_list">
+        <ul>
+          <li><a href="../index/html/index_new.html">首页</a></li>
+          <li><a href="../send_revise/html/send.html">告白</a></li>
+          <li><a class="now" href="../../user/user.html">我的</a></li>
+          <li>
+            <a href="https://github.com/Patrickill/love_wall">项目地址</a>
+          </li>
+        </ul>
+      </div>
+      <div class="right_list">
+        <ul>
+          <li>
+            <a href="../../login-register/templates/register.html">注册</a>
+          </li>
+          <li class="icon_box">
+            <img
+              src="../index/image/user-circle.png"
+              width="50px"
+              height="50px"
+            />
+          </li>
+          <li class="register_buttom">
+            <a href="../../login-register/templates/login.html">登陆</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="body">
+      <bar>
+        <div>
+          <a href="">我的表白</a>
+        </div>
+        <div>
+          <a href="">我的评论</a>
+        </div>
+        <div>
+          <a href="">退出登录</a>
+        </div>
+      </bar>
+      <main>
+        <div class="container">
+          <ul>
+            <li>
+              <textarea
+                class="comment"
+                placeholder="表白语句1(直接输入即可修改此表白）"
+              ></textarea>
+              <button name="button">修改</button>
+              <button name="button">删除</button>
+            </li>
+            <li>
+              <textarea class="comment" placeholder="表白2"></textarea>
+              <button name="button">修改</button>
+              <button name="button">删除</button>
+            </li>
+            <li>
+              <textarea class="comment" placeholder="表白3"></textarea>
+              <button name="button">修改</button>
+              <button name="button">删除</button>
+            </li>
+            <li>
+              <textarea class="comment" placeholder="表白4"></textarea>
+              <button name="button">修改</button>
+              <button name="button">删除</button>
+            </li>
+            <li>
+              <textarea class="comment" placeholder="表白5"></textarea>
+              <button name="button">修改</button>
+              <button name="button">删除</button>
+            </li>
+          </ul>
+        </div>
+      </main>
+    </div>
+  </body>
 </html>
