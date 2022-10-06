@@ -1,7 +1,4 @@
-window.onload=showmessage();
-function $(id) {
-  return typeof id === "string" ? document.getElementById(id) : null;
-}
+
 function showmessage()
 {
   document.getElementById('comment_area').innerHTML="评论:";
@@ -9,12 +6,12 @@ function showmessage()
     method:'get',
     url:'http://180.76.167.8:8888/api/message/getR',
     headers: {
-      'Authorization': sessionStorage.getItem('token')
+      'Authorization': localStorage.getItem('token')
   }
 }
   axios(conflg)
   .then(function(response){
-      console.log(response.data);
+    console.log(response.data);
       document.getElementById('from').innerHTML=response.data.data.info.name;
       document.getElementById('to_content').innerHTML=response.data.data.info.message;
       document.getElementById('show_time').innerHTML=response.data.data.info.time;
@@ -32,10 +29,9 @@ function showmessage()
   .catch(function(error)
   {
     console.error();
-    alert(error);
   });
 }
-function send_comment()
+function clean()
 {
   let comment_ul=document.getElementById('comment_area');
   let new_comment=document.createElement('li');
